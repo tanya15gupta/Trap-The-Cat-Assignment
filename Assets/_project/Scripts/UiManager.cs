@@ -11,7 +11,7 @@ namespace TrapTheCat.Ui
         {
             playerWin.SetActive(false);
             catWin.SetActive(false);
-		}
+        }
 
         public void ActivatePlayerWin()
         {
@@ -22,5 +22,5 @@ namespace TrapTheCat.Ui
         {
             catWin.SetActive(true);
         }
-	}
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TrapTheCat.Grid;
 using TrapTheCat.Cat;
 using TrapTheCat.Ui;
@@ -8,7 +6,7 @@ using TrapTheCat.PlayerInput;
 
 namespace TrapTheCat.Game
 {
-	public class GameManager : GenericSingleton<GameManager>
+	public class GameManager : MonoBehaviour
 	{
 		[Header("Grid")]
 		[SerializeField] private GridManager gridManager;
