@@ -17,7 +17,7 @@ namespace TrapTheCat.Cat
         private Tile[,] grid;
 
         private float yOffset = 0.18f;
-        private float waitTime = 4f;
+        private float waitTime = 2f;
 
         private int currentX;
         private int currentY;

@@ -17,7 +17,7 @@ namespace TrapTheCat.Game
 
 		[Space]
 		[Header("Player")]
-		[SerializeField] private PlayerInputManager playerInputManager;
+		[SerializeField] private PlayerManager playerInputManager;
 
 		[Space]
 		[Header("UI")]
@@ -41,30 +41,25 @@ namespace TrapTheCat.Game
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				if(!IsGameOver())
+				var playerMoved = playerInputManager.PlayerMove(cat.CurrentPosOfCat());
+				if (playerMoved)
 				{
-					var playerMoved = playerInputManager.PlayerMove(cat.CurrentPosOfCat());
-					if (playerMoved)
-					{
-						cat.MoveCat();
-					}
+					cat.MoveCat();
 				}
+				IsGameOver();
 			}
 		}
 
-		private bool IsGameOver()
+		private void IsGameOver()
 		{
 			if(cat.catWon)
 			{
 				uiManager.ActivateCatWin();
-				return true;
 			}
 			else if(!cat.pathAvailabe)
 			{
 				uiManager.ActivatePlayerWin();
-				return true;	
 			}
-			return false;
 		}
 	}
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TrapTheCat.PlayerInput
 {
-    public class PlayerInputManager : MonoBehaviour
+    public class PlayerManager : MonoBehaviour
     {
         private Camera camera;
         private RaycastHit2D hit;
